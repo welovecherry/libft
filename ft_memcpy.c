@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 19:24:23 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/20 13:37:42 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/03/24 22:04:33 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,8 @@ int	main(void)
 {
 	int	i;
 	int	arr1[5] = {48, 49, 50, 51, 52}; // 라이트함수는 출력가능한 문자를 출력하는 용도라서 arr1 안에는 아스키코드를 넣어라.
-	int	arr2[5];
-	char	str1[10] = "aaaaaaaa"; 
-	char	str2[10] = "aaaaaaaa"; 
+//	char	str1[10] = "aaaaaaaa"; 
+///	char	str2[10] = "aaaaaaaa"; 
 
 	for (i=0; i<5; i++)
 		write(1, &(arr1[i]), 1); // 라이트 함수로 바이트 단위로 출력하는것이 가장 정확하다

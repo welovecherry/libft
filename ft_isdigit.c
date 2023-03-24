@@ -6,14 +6,14 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 20:40:12 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/17 13:30:15 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/03/24 22:05:10 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ctype.h> // 1231
 #include <stdio.h> // 123123
 
-int	isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if ('0' <= c && c <= '9')
 		return (1);
@@ -30,7 +30,7 @@ int	main(void)
 	i = 0;
 	while (i < 20)
 	{
-		printf("%d\n", isdigit(c));
+		printf("%d\n", ft_isdigit(c));
 		i++;
 		c++;
 	}
