@@ -1,37 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/15 20:40:12 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/25 15:20:39 by jungmiho         ###   ########.fr       */
+/*   Created: 2023/03/25 17:32:42 by jungmiho          #+#    #+#             */
+/*   Updated: 2023/03/25 17:47:38 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+#include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
 {
-	if ('0' <= c && c <= '9')
-		return (1);
-	else
-		return (0);
+	size_t			idx;
+	unsigned char	*ptr;
+
+	ptr = (unsigned char *)s;
+	idx = 0;
+	while (idx < n)
+	{
+		ptr[idx] = 0;
+		s++;
+		idx++;
+	}
 }
 
-#include <ctype.h> // 1231
-#include <stdio.h> // 123123
+#include <stdio.h>
+#include <strings.h>
 int	main(void)
 {
-	char	c;
-	int		i;
+	char str1[10] = "abcde";
+	char str2[10] = "abcde";
 
-	c = '0';
-	i = 0;
-	while (i < 20)
-	{
-		printf("%d\n", ft_isdigit(c));
-		i++;
-		c++;
-	}
-	return (0);
+	bzero(str1, sizeof(str1));
+	ft_bzero(str2, sizeof(str2));
+
+	return 0;
 }

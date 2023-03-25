@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jungmiho <jungmiho@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 16:19:04 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/20 20:09:54 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/03/25 21:17:15 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 	dst[dst_len + i] = '\0';
 	return (dst_len + src_len);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 int main(void)
@@ -53,4 +53,24 @@ int main(void)
 		size++;
 	}
 	return 0;
-}
+} */
+
+//#include <stdio.h>
+//#include <string.h>
+//int main(void)
+//{
+//	unsigned int	size;
+
+//	size = 0;
+//	while (size < 10)
+//	{
+//		char	dest1[20] = "01234";
+//		char	dest2[20] = "01234";
+//		char	src[10] = "efg";
+//		printf("size = %u-----------------\n", size);
+//		printf("my func ret:%zu, dest:%s\n", ft_strlcat(dest2, src, size), dest2);
+//		printf("strlcat ret:%lu, dest:%s\n\n", strlcat(dest1, src, size), dest1);
+//		size++;
+//	}
+//	return 0;
+//}

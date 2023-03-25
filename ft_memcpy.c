@@ -3,21 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jungmiho <jungmiho@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 19:24:23 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/24 22:04:33 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/03/25 15:21:56 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
-#include <unistd.h>
 /*The memcpy() function copies n bytes from memory area src to memory area dst.
 If dst and src over-lap, behavior is undefined.  
 Applications in which dst and src might overlap should use memmove instead.*/
 
-void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
 	size_t	idx;
 
@@ -29,9 +26,14 @@ void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 		src += 1;
 		idx++;
 	}
-	return ((void *)dst); // 리턴값의 데이터타입 보이드*로 바꿔라
+	return ((void *)dst);
 }
 
+
+
+#include <string.h>
+#include <stdio.h>
+#include <unistd.h>
 int	main(void)
 {
 	int	i;

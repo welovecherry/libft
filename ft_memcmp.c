@@ -3,15 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jungmiho <jungmiho@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 14:09:31 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/24 22:03:24 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/03/25 17:55:47 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 /*The memcmp() function returns zero if the two
      strings are identical, otherwise returns the
      difference between the first two differing
@@ -23,7 +21,7 @@
 	  Zero-length strings are always identical.
 */
 
-int ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*ptr1;
 	unsigned char	*ptr2;
@@ -32,10 +30,10 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
 	ptr1 = (unsigned char *)s1;
 	ptr2 = (unsigned char *)s2;
 	i = 0;
-	while (i < n) 
+	while (i < n)
 	{
 		if (ptr1[i] != ptr2[i])
-			break;
+			break ;
 		i++;
 	}
 	if (i == n)
@@ -44,6 +42,8 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
 		return (ptr1[i] - ptr2[i]);
 }
 
+#include <stdio.h>
+#include <string.h>
 int main(void)
 {
 	size_t		n;

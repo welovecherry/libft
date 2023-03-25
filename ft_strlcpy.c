@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jungmiho <jungmiho@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 16:07:46 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/20 19:19:32 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/03/25 20:44:27 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
 	dst[i] = '\0';
 	return (src_len);
 }
-
+/*
 int main(void) {
 	char			dest1[30] = "abcde";
 	char			dest2[30] = "abcde";
@@ -46,3 +46,4 @@ int main(void) {
 	}
 	return 0;
 }
+*/

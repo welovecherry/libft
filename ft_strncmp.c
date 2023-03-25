@@ -3,19 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jungmiho <jungmiho@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 16:19:28 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/24 16:19:30 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/03/25 18:00:03 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
-#include <stdio.h>
-#include <string.h>
 /* The comparison is done using unsigned characters, 
 so that `\200' is greater than `\0'.*/
+
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -38,6 +36,9 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (u_s1[i] - u_s2[i]);
 }
 
+
+#include <stdio.h>
+#include <string.h>
 int	main(void)
 {
 	// char s1[10] = {200, 127};

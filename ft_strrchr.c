@@ -3,30 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jungmiho <jungmiho@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 13:40:03 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/22 13:42:37 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/03/25 15:24:41 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	size_t	len;
 
-	len = ft_strlen(s); // put ft!!!
+	len = ft_strlen(s);
 	while (len)
 	{
-		if (*(s + len - 1) == c) // 마지막 인덱스는 렌-1 이다
+		if (*(s + len - 1) == c)
 			return ((char *)(s + len - 1));
 		len--;
 	}
 	return (0);
 }
 
-int main(void)
+int	main(void)
 {
 	char	ch = 'c';
 	char	*str1 = "bcdefbc";

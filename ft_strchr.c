@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jungmiho <jungmiho@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 13:35:48 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/22 13:36:21 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/03/25 17:56:01 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	char	*ptr;
 
@@ -22,7 +22,7 @@ char *ft_strchr(const char *s, int c)
 		ptr++;
 	}
 	return (0);
-} 
+}
 
 #include <stdio.h>
 #include <string.h>
