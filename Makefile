@@ -6,13 +6,13 @@
 #    By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/24 18:31:31 by jungmiho          #+#    #+#              #
-#    Updated: 2023/03/25 15:47:44 by jungmiho         ###   ########.fr        #
+#    Updated: 2023/03/27 21:11:03 by jungmiho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CFLAGS = -Wall -Wextra -Werror
-SRCS = asdfasdfasdfasdfasdfasdfasdfasdf
+SRCS = asdfasdfasdfasdfasdfasdfasdfasdf #  ㅍㅏ이ㄹ이름 다  적적기
 OBJS = $(SRCS:.c=.o)
 
 all : $(NAME)
@@ -30,3 +30,6 @@ fclean : clean
 	rm -f $(NAME)
 
 re : fclean all
+
+#bonus :
+#make bonus relink x
