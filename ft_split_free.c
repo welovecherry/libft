@@ -58,7 +58,7 @@ char	*assign_box(size_t *ch_cnt, char const *s, int s_idx)
 	int		box_idx;
 
 	box = (char *)malloc(sizeof(char) * (*ch_cnt + 1));
-	if (!box) // FIX
+	if (!box)
 		return (0);
 	box_idx = 0;
 	while (box_idx < *ch_cnt)

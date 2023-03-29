@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 16:19:28 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/25 18:00:03 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/03/29 14:49:09 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (u_s1[i] - u_s2[i]);
 }
 
-
+/*
 #include <stdio.h>
 #include <string.h>
 int	main(void)
@@ -58,4 +58,4 @@ int	main(void)
 	}
 	return 0;
 }
-
+*/
