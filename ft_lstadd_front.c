@@ -41,7 +41,7 @@ int	main(void)
 
 	print_all_nodes(head);
 
-	*lst = head;
+	// *lst = head;
 	ft_lstadd_front(&head, new);
 	print_all_nodes(head);
 
