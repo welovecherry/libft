@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jungmiho <jungmiho@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 20:42:51 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/20 20:44:45 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/03/25 15:24:30 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
- #include "libft.h"
 
 int	ft_toupper(int c)
 {
@@ -23,6 +21,7 @@ int	ft_toupper(int c)
  upper-case letter.
  The argument must be representable as an unsigned char or the value of EOF.
 */
+
 int main(void)
 {
 	for (int i=0; i<100; i++)

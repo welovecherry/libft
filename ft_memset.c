@@ -1,21 +1,32 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/25 15:22:09 by jungmiho          #+#    #+#             */
+/*   Updated: 2023/03/25 15:23:11 by jungmiho         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+void	*ft_memset(void *b, int c, size_t len)
+{
+	size_t	idx;
+
+	idx = 0;
+	while (idx < len)
+	{
+		*(unsigned char *)b = (unsigned char)c;
+		b = (unsigned char *)b + 1;
+		idx++;
+	}
+	return ((void *)b);
+}
+
 #include <string.h>
 #include <stdio.h>
 #include <unistd.h>
-
-void *ft_memset(void *b, int c, size_t len)
-{
-    size_t idx;
-	
-    idx = 0;
-    while (idx < len)
-    {
-        *(unsigned char *)b = (unsigned char)c;
-        b = (unsigned char *)b + 1;
-        idx++;
-    }
-    return ((void *)b);
-}
-
 int main(void)
 {
 	int	arr1[10] = {3, 3, 3, 3, 3, 3, 3, 3, 3, 3};

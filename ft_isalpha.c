@@ -1,17 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalpha.c                                          :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 16:10:53 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/15 20:10:18 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/03/25 15:09:34 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h> // 121
-#include <ctype.h> // 123541981591522231212as1dadfasdfasdfa555555555555552222222222222
 
 int	ft_isalpha(int c)
 {
@@ -21,6 +18,8 @@ int	ft_isalpha(int c)
 		return (0);
 }
 
+#include <stdio.h>
+#include <ctype.h>
 int	main(void)
 {
 	char	c;

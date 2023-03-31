@@ -1,18 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isascii.c                                          :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jungmiho <jungmiho@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 21:28:02 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/15 22:47:49 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/03/25 17:59:05 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <ctype.h> // 12133
-#include <stdio.h> // 123123
-#include <limits.h>
 
 int	ft_isascii(int c)
 {
@@ -21,6 +17,10 @@ int	ft_isascii(int c)
 	return (0);
 }
 
+
+#include <ctype.h> // 12133
+#include <stdio.h> // 123123
+#include <limits.h>
 int main(void)
 {
 	int		i;
@@ -28,7 +28,6 @@ int main(void)
 	i = INT_MIN;
 	while (i < INT_MAX)
 	{
-		//printf("i:%d isascii:%d, myfunc:%d\n",i, isascii(i), ft_isascii(i));
 		if (isascii(i) != ft_isascii(i))
 		{
 			printf("KO\n");

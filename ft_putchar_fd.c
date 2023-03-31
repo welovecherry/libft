@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/15 20:40:12 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/25 15:20:39 by jungmiho         ###   ########.fr       */
+/*   Created: 2023/03/29 20:36:50 by jungmiho          #+#    #+#             */
+/*   Updated: 2023/03/29 20:41:26 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
-{
-	if ('0' <= c && c <= '9')
-		return (1);
-	else
-		return (0);
-}
+#include "libft.h"
+/* Outputs the character ’c’ to the given file descriptor.*/
 
-#include <ctype.h> // 1231
-#include <stdio.h> // 123123
+void	ft_putchar_fd(char c, int fd)
+{
+	write(1, &c, fd);
+}
+/*
 int	main(void)
 {
 	char	c;
-	int		i;
+	int		fd;
 
-	c = '0';
-	i = 0;
-	while (i < 20)
-	{
-		printf("%d\n", ft_isdigit(c));
-		i++;
-		c++;
-	}
+	c = 'c';
+	fd = 1;
+	ft_putchar_fd(c, fd);
+
 	return (0);
-}
+} */

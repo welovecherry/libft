@@ -3,23 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jungmiho <jungmiho@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 18:59:51 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/18 19:00:32 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/03/25 17:59:13 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h> // 12
-#include <ctype.h> // 123123123
-// 출력 가능한 범위에 있으면 0이 아닌 값을 리턴하라고 했는데 1리턴해도 괜찮겠지?
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	if (32 <= c && c <= 126)
 		return (1);
 	return (0);
 }
 
+#include <stdio.h> // 12
+#include <ctype.h> // 123123123
 int main(void)
 {
 	int	c;
