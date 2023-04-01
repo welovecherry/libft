@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 18:35:29 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/31 22:24:22 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/01 15:15:52 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*temp;
 
 	temp = *lst;
-	while (temp)
+	while (temp != NULL)
 	{
 		ft_lstdelone(temp, del);
 		next_temp = temp->next;

@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 17:54:17 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/29 19:41:59 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/01 16:10:02 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,18 +20,20 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	size_t	i;
 	size_t	s_len;
-	char	*ptr_return;
+	char	*ptr_map;
 
 	s_len = ft_strlen(s);
-	ptr_return = (char *)malloc(sizeof(char) * (s_len + 1));
+	ptr_map = (char *)malloc(sizeof(char) * (s_len + 1));
+	if (!ptr_map)
+		return (NULL);
 	i = 0;
 	while (i < s_len)
 	{
-		ptr_return[i] = f(i, s[i]);
+		ptr_map[i] = f(i, s[i]);
 		i++;
 	}
-	ptr_return[i] = '\0';
-	return (ptr_return);
+	ptr_map[i] = '\0';
+	return (ptr_map);
 }
 
 // deletetetetet // 아스키 코드값을 i만큼 더하게 하는 함수

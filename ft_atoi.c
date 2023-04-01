@@ -6,9 +6,13 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 15:08:54 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/25 15:09:03 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/01 20:48:10 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "limits.h" // delete??
+#include <stdio.h>
+#include <stdlib.h>
 
 int	ft_atoi(const char *str)
 {
@@ -27,7 +31,7 @@ int	ft_atoi(const char *str)
 	result = 0;
 	while ('0' <= *str && *str <= '9')
 	{
-		result = result * 10 + (*str - '0');
+		result = (result * 10) + (*str - '0');
 		str++;
 	}
 	result = sign * result;
@@ -38,18 +42,17 @@ int	ft_atoi(const char *str)
 	return (result);
 }
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <limits.h>
-int main(void) {
-
-	char *str1 = "   92233720368547758070aa";
-	char *str2 = "   92233720368547758070aa";
+int main(void)
+{
+	char *str1 = "   2147483647aa";
+	char *str2 = "   2147483647aa";
 
 	printf("longlongMax : %lld\n", LLONG_MAX);
+	
 	printf("atoi    : %d\n", atoi(str1));
 	printf("my func : %d\n", ft_atoi(str2));
 	// ft_atoi(str1);
-	return 0;
-} 
+	printf("test : %d\n", INT_MAX + 1);
 
+	return (0);
+}
