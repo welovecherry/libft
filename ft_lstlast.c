@@ -6,28 +6,12 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 16:37:47 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/31 21:59:33 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/03 22:15:11 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//t_list	*ft_lstlast(t_list *lst)
-//{
-//	t_list	*last_node;
-//	int		i;
-//	int		lst_len;
-
-//	lst_len = ft_lstsize(lst);
-//	i = 0;
-//	while (i < lst_len - 1)
-//	{
-//		lst = lst->next;
-//		i++;
-//	}
-//	last_node = lst;
-//	return (last_node);
-//}
 t_list	*ft_lstlast(t_list *lst)
 {
 	t_list	*temp;
@@ -39,7 +23,7 @@ t_list	*ft_lstlast(t_list *lst)
 	}
 	return (temp);
 }
-
+/*
 // delete below
 void	print_nodes(t_list *node)
 {
@@ -82,3 +66,4 @@ int	main(void)
 	printf("main res:%s\n", (char *)ptr->content);
   return 0;
 }
+*/

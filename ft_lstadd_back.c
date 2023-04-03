@@ -6,23 +6,21 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 16:40:02 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/31 23:00:01 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/03 22:13:39 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new) // 왜  ** 썼썼나??
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last_node;
 
 	last_node = ft_lstlast(*lst);
 	last_node->next = new;
-	//new->next = NULL; ㄴ뉴가 노노드  여여러러개개일  수  있있다다.
-	
 }
-// 만약에 lst가 사이즈가 0일 경우 lst의 값은 뉴의 주소가 된다. *lst의 값을 뉴의 주소로 바꿔야하는데 이중포잍너를 쓸 수밖에 없다.  
-
+/*
+// delete below
 void	print_all_nodes(t_list *node)
 {
 	while (node)
@@ -67,3 +65,4 @@ int main(void)
 	
   return 0;
 }
+*/

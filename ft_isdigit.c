@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 20:40:12 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/25 15:20:39 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/03 22:12:41 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_isdigit(int c)
 	else
 		return (0);
 }
-
+/*
 #include <ctype.h> // 1231
 #include <stdio.h> // 123123
 int	main(void)
@@ -35,3 +35,4 @@ int	main(void)
 	}
 	return (0);
 }
+*/

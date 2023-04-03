@@ -5,54 +5,93 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/25 15:08:54 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/01 20:48:10 by jungmiho         ###   ########.fr       */
+/*   Created: 2023/04/03 22:00:36 by jungmiho          #+#    #+#             */
+/*   Updated: 2023/04/03 22:11:56 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "limits.h" // delete??
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-int	ft_atoi(const char *str)
-{
-	long	result;
-	int		sign;
-
+char	*pass_whitespace_reach_str_num(char *str, int *sign)
+{	
 	while ((9 <= *str && *str <= 13) || (*str == 32))
 		str++;
-	sign = 1;
+	*sign = 1;
 	if (*str == '-' || *str == '+')
 	{
 		if (*str == '-')
-			sign = -1;
+			*sign = -1;
 		str++;
 	}
+	return (str);
+}
+
+int	ft_atoi(const char *str)
+{
+	char		*str_num;
+	long long	result;
+	long long	prev_result;
+	int			sign;
+	size_t		len;
+
+	str_num = pass_whitespace_reach_str_num((char *)str, &sign);
+	if (str_num == NULL || *str_num == '\0')
+		return (-1);
 	result = 0;
-	while ('0' <= *str && *str <= '9')
+	len = 0;
+	prev_result = result;
+	while ('0' <= *str_num && *str_num <= '9')
 	{
-		result = (result * 10) + (*str - '0');
-		str++;
+		result = (result * 10) + (*str_num - '0');
+		if (result / 10 != prev_result || len > 10)
+		{
+			return (-1);
+		}
+		str_num++;
+		prev_result = result;
+		len++;
 	}
 	result = sign * result;
-	if (result > INT_MAX)
-		result = INT_MIN + (result - INT_MAX - 1);
-	else if (result < INT_MIN)
-		result = INT_MAX + (result + INT_MIN + 1);
-	return (result);
+	return ((int)result);
 }
-
-int main(void)
+/*
+int	main(void)
 {
-	char *str1 = "   2147483647aa";
-	char *str2 = "   2147483647aa";
-
-	printf("longlongMax : %lld\n", LLONG_MAX);
+	int		idx;
+	char	*strs[25];
 	
-	printf("atoi    : %d\n", atoi(str1));
-	printf("my func : %d\n", ft_atoi(str2));
-	// ft_atoi(str1);
-	printf("test : %d\n", INT_MAX + 1);
+	strs[0] = "2147483647";
+	strs[1] = "2147483648";
+	strs[2] = "-2147483648";
+	strs[3] = "-2147483649";
+	strs[4] = "4294967295";
+	strs[5] = "4294967296";
+	strs[6] = "-4294967295";
+	strs[7] = "-4294967296";
+	strs[8] = "9223372036854775807";
+	strs[9] = "9223372036854775808";
+	strs[10] = "-9223372036854775808";
+	strs[11] = "-9223372036854775809";
+	strs[12] = "18446744073709551615";
+	strs[13] = "18446744073709551616";
+	strs[14] = "18446744073709551617";
+	strs[15] = "18446744073709551618";
+	strs[16] = "-18446744073709551615";
+	strs[17] = "-18446744073709551616";
+	strs[18] = "-18446744073709551617";
+	strs[19] = "9999999999";
+	strs[20] = "-9999999999";
+	strs[21] = "184467440737095516180000000000ddd";
+	strs[22] = 0;
 
-	return (0);
+	idx = 0;
+	while (strs[idx])
+	{
+		printf("strs[%2d] = %20s\t", idx, strs[idx]);
+		printf("my func = %15d\t", ft_atoi(strs[idx]));
+		printf("atoi = %15d\n\n", atoi(strs[idx]));
+		idx++;
+	}
+  return 0;
 }
+*/

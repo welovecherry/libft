@@ -6,15 +6,11 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 17:54:17 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/01 16:10:02 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/03 22:22:06 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/* applies the function ’f’ to each character of the string ’s’, 
-and passing its index as first argument to create a new string (with malloc(3))
- resulting from successive applications of ’f’.
-*/
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -35,8 +31,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	ptr_map[i] = '\0';
 	return (ptr_map);
 }
-
-// deletetetetet // 아스키 코드값을 i만큼 더하게 하는 함수
+/* applies the function ’f’ to each character of the string ’s’, 
+and passing its index as first argument to create a new string (with malloc(3))
+ resulting from successive applications of ’f’.
+*/
+/*
 char	add_ascii(unsigned int i, char ch)
 {
 	ch = ch + i;
@@ -52,3 +51,4 @@ int	main(void)
 	printf("main res: %s\n", ptr);
 	return (0);
 }
+*/

@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 16:10:53 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/25 15:09:34 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/03 16:00:42 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
-
+/*
 #include <stdio.h>
 #include <ctype.h>
 int	main(void)
@@ -35,3 +35,4 @@ int	main(void)
 	}
 	return (0);
 }
+*/

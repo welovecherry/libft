@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 15:25:29 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/01 20:14:27 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/03 22:24:03 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,13 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-// 아래 3개 헤더 쓰쓰면  안안되되나나??
-# include <stdio.h> // 지워라
-# include <string.h> // 지워라
-# include <ctype.h> // 지워라
-
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }	t_list;
 
-// 나중에 활용할 수 있게 미리 모든 프로토타입 넣어도 되겠지???
+void	ft_bzero(void *s, size_t n);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
@@ -44,6 +39,5 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
-
 
 #endif

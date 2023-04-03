@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 18:35:29 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/01 15:15:52 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/03 22:14:06 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,12 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		free(temp);
 		temp = next_temp;
 	}
+}
+/*
+// delete below
+void	free_content(void *node)
+{
+	free(node);
 }
 
 int main(void) 
@@ -59,6 +65,6 @@ int main(void)
     
     // print_all_nodes(head); // 콘텐츠 부분이 프리되어서 출력 안됨
     ft_lstclear(&head, free_content);
-    
       return 0;
-}
+} 
+*/

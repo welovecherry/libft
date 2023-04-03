@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 18:10:32 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/25 20:25:12 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/03 22:23:06 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ptr_substr[i] = '\0';
 	return (ptr_substr);
 }
-
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
+/*
 int	main(void)
 {
 	size_t	len;
 	size_t	start;
-	char	*res;
 	
 	 len = 0;
 	 while (len <= 10)
@@ -50,11 +46,12 @@ int	main(void)
 	 	while (start < 5)
 	 	{
 			char	*s = "abcdefg";
-	 		printf("len:%zu, start:%zu, %s\n", len, start, ft_substr(s, start, len));
+	 		printf("%zu, %zu, %s\n", len, start, ft_substr(s, start, len));
 	 		start++;		
 	 	}
 	 	len++;
 		printf("\n");
-	 }
+	}
 	return (0);
 }
+*/

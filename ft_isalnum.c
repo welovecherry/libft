@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 15:16:48 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/25 15:20:03 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/03 16:00:29 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
-
-
+/*
 #include <ctype.h> // 123123
 #include <stdio.h> // 123123
 int	main(void)
@@ -35,3 +34,4 @@ int	main(void)
 	}
 	return (0);
 }
+*/

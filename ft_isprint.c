@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 18:59:51 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/25 17:59:13 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/03 22:12:54 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_isprint(int c)
 		return (1);
 	return (0);
 }
-
+/*
 #include <stdio.h> // 12
 #include <ctype.h> // 123123123
 int main(void)
@@ -28,3 +28,4 @@ int main(void)
 
 	return (0);
 }
+*/

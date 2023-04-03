@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 18:13:53 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/25 21:18:48 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/03 22:21:34 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(return_ptr, s2, s1_len + s2_len + 1);
 	return (return_ptr);
 }
-
+/*
 int	main(void)
 {
 	char	s1[30] = "01234";
@@ -45,3 +45,4 @@ int	main(void)
 	}
 	return (0);
 }
+*/

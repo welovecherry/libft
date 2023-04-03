@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 13:35:48 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/25 17:56:01 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/03 22:19:33 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (0);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 int main(void)
@@ -40,3 +40,4 @@ int main(void)
 	}
 	return 0;
 }
+*/

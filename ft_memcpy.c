@@ -6,13 +6,15 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 19:24:23 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/25 15:21:56 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/03 22:17:29 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*The memcpy() function copies n bytes from memory area src to memory area dst.
 If dst and src over-lap, behavior is undefined.  
 Applications in which dst and src might overlap should use memmove instead.*/
+
+#include "libft.h"
 
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
@@ -28,16 +30,15 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 	}
 	return ((void *)dst);
 }
-
-
-
+/*
 #include <string.h>
 #include <stdio.h>
 #include <unistd.h>
 int	main(void)
 {
 	int	i;
-	int	arr1[5] = {48, 49, 50, 51, 52}; // 라이트함수는 출력가능한 문자를 출력하는 용도라서 arr1 안에는 아스키코드를 넣어라.
+	int	arr1[5] = {48, 49, 50, 51, 52};
+// to use write function with printable value, put ascii value in arr1
 //	char	str1[10] = "aaaaaaaa"; 
 ///	char	str2[10] = "aaaaaaaa"; 
 
@@ -52,3 +53,4 @@ int	main(void)
 	
 	return (0);
 }
+*/

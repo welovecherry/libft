@@ -6,15 +6,11 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 17:16:49 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/27 17:51:55 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/03 22:13:12 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
-//#include <string.h>
-//#include <stdlib.h>
-//#include <limits.h>
 
 size_t	get_int_len(int n)
 {
@@ -29,7 +25,7 @@ size_t	get_int_len(int n)
 	return (len);
 }
 
-char	*assign_zero(int n)
+char	*assign_zero(void)
 {
 	char	*ptr_zero;
 
@@ -41,7 +37,7 @@ char	*assign_zero(int n)
 	return (ptr_zero);
 }
 
-char	*turn_negative_into_positive(char *ptr_itoa, int *n, size_t len)
+char	*turn_negative_into_positive(char *ptr_itoa, int *n)
 {
 	int	is_int_min;
 
@@ -87,7 +83,7 @@ char	*ft_itoa(int n)
 	size_t	len;
 
 	if (n == 0)
-		return (assign_zero(n));
+		return (assign_zero());
 	len = get_int_len(n);
 	is_negative = (n < 0);
 	ptr_itoa = (char *)malloc(sizeof(char) * (len + 1 + is_negative));
@@ -96,22 +92,21 @@ char	*ft_itoa(int n)
 	return_ptr = ptr_itoa;
 	if (n < 0)
 	{
-		ptr_itoa = turn_negative_into_positive(ptr_itoa, &n, len);
+		ptr_itoa = turn_negative_into_positive(ptr_itoa, &n);
 	}
 	ptr_itoa = assign_positive_itoa(n, ptr_itoa, len);
 	return (return_ptr);
 }
-
+/*
 int	main(void)
 {
-	int		n1= INT_MIN;
-	int		n2= INT_MAX;
+	int		n1= -2147483648;
+	int		n2= 2147483647;
 	int		n3= 0;
 	int		n4= 10;
 	int		n5= 12345678;
-
-	
 	char	*res;
+	
 	res = ft_itoa(n1);
 	printf("res1 :%s\n", res);
 	res = ft_itoa(n2);
@@ -124,3 +119,4 @@ int	main(void)
 	printf("res5 :%s\n", res);
 	return (0);
 }
+*/

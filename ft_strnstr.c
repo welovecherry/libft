@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 16:00:27 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/24 22:00:22 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/03 22:22:33 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	return (0);
 }
 
-
+/*
 #include <stdio.h>
 #include <string.h>
 int main(void)
@@ -101,3 +101,4 @@ int main(void)
 	}
 	return (0);
 }
+*/

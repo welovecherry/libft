@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 21:28:02 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/25 17:59:05 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/03 16:00:59 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@ int	ft_isascii(int c)
 		return (1);
 	return (0);
 }
-
-
+/*
 #include <ctype.h> // 12133
 #include <stdio.h> // 123123
 #include <limits.h>
@@ -38,3 +37,4 @@ int main(void)
 	printf("SUCCESS\n");
 	return (0);
 }
+*/

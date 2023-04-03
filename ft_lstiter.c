@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 15:57:46 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/01 15:59:31 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/03 22:14:55 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		lst = lst->next;
 	}
 }
-
+/*
 // delete below
 void	change_into_hi(void *content)
 {
@@ -34,28 +34,6 @@ void	print_all_nodes(t_list *ptr)
 		printf("%s\n", ptr->content);
 		ptr = ptr->next;
 	}
-}
-
-char	*ft_strdup(char *src)
-{
-	int		s_len;
-	int		i;
-	char	*ptr;
-
-	s_len = 0;
-	while (src[s_len] != '\0')
-		s_len++;
-	ptr = (char *)malloc(sizeof(char) * s_len + 1);
-	if (!ptr)
-		return (0);
-	i = 0;
-	while (i < s_len)
-	{
-		ptr[i] = src[i];
-		i++;
-	}
-	ptr[i] = '\0';
-	return (ptr);
 }
 
 int	main(void)
@@ -93,3 +71,4 @@ int	main(void)
 	print_all_nodes(head);
 	return 0;
 }
+*/

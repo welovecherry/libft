@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:48:17 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/29 21:06:35 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/03 22:18:55 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void	ft_putnbr_fd(int n, int fd)
 		div /= 10;
 	}
 }
-
+/*
 int main(void)
 {
 	int	num1 = 2147483647;
@@ -82,6 +82,6 @@ int main(void)
 
 	ft_putnbr_fd(num5, fd);
 	write(1, "\n", 1);
-
   	return 0;
 }
+*/

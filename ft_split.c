@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 16:19:50 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/01 16:27:48 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/03 22:19:12 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ char	**ft_split(char const *s, char c)
 	drawer[d_idx] = 0;
 	return (drawer);
 }
-
+/*
 int	main(void)
 {
 	char s[15] = "aa2bb2";
@@ -122,6 +122,6 @@ int	main(void)
 		printf("%s\n", drawer[i]);
 		i++;
 	}
-
 	return (0);
 }
+*/

@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 16:34:19 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/31 16:36:53 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/03 22:13:58 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	new->next = *lst;
 	*lst = new;
 }
-
+/*
 // delete below
 void	print_all_nodes(t_list *node)
 {
@@ -31,7 +31,6 @@ void	print_all_nodes(t_list *node)
 
 int	main(void)
 {
-	t_list	**lst;
 	t_list	*head;
 	t_list	*node1;
 	t_list	*node2;
@@ -50,10 +49,8 @@ int	main(void)
 	node3->next = NULL;
 
 	print_all_nodes(head);
-
-	// *lst = head;
 	ft_lstadd_front(&head, new);
 	print_all_nodes(head);
-
 	return (0);
 }
+*/

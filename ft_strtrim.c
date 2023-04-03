@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 16:35:25 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/29 17:07:01 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/03 22:22:54 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,18 +58,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*ptr_trimmed;
 	size_t	first_idx;
 	size_t	last_idx;
-	size_t	trimmed_len;
-	//size_t	i;
 
-	//set_len = ft_strlen(set);
 	first_idx = get_first_idx(s1, set);
 	last_idx = get_last_idx(s1, first_idx, set);
-	trimm
 	ptr_trimmed = (char *)malloc(sizeof(char) * (last_idx - first_idx + 2));
 	ft_strlcpy(ptr_trimmed, s1 + first_idx, (last_idx - first_idx + 2));
 	return (ptr_trimmed);
 }
-
+/*
 #include <unistd.h>
 int main(void)
 {
@@ -87,3 +83,4 @@ int main(void)
 	}
 	return 0;
 }
+*/

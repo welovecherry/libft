@@ -6,9 +6,11 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 15:22:09 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/25 15:23:11 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/03 22:18:06 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {
@@ -23,7 +25,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return ((void *)b);
 }
-
+/*
 #include <string.h>
 #include <stdio.h>
 #include <unistd.h>
@@ -70,3 +72,4 @@ int main(void)
 	}
 	return (0);
 }
+*/

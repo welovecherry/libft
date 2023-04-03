@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 17:32:42 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/25 17:47:38 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/03 15:59:50 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_bzero(void *s, size_t n)
 		idx++;
 	}
 }
-
+/*
 #include <stdio.h>
 #include <strings.h>
 int	main(void)
@@ -38,4 +38,4 @@ int	main(void)
 	ft_bzero(str2, sizeof(str2));
 
 	return 0;
-}
+} */

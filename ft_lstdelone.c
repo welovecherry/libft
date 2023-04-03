@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 18:21:57 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/01 15:06:12 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/03 22:14:40 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 	lst = lst->next;
 	del(temp->content);
 }
-
+/*
 // delete below
 void	free_content(void *content)
 {
@@ -55,8 +55,7 @@ int	main(void)
     node1->next = node2;
     node2->next = node3;
     node3->next = NULL;
-
 	ft_lstdelone(head, free_content);
-
 	return 0;
 }
+*/

@@ -6,12 +6,9 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 16:19:28 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/29 14:49:09 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/03 22:22:17 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* The comparison is done using unsigned characters, 
-so that `\200' is greater than `\0'.*/
 
 #include "libft.h"
 
