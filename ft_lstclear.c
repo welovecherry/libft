@@ -6,11 +6,11 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 18:35:29 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/03 22:14:06 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/05 15:59:32 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h" // delete it later
+#include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {

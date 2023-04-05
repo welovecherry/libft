@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 22:00:36 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/03 22:11:56 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/06 00:11:04 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ char	*pass_whitespace_reach_str_num(char *str, int *sign)
 			*sign = -1;
 		str++;
 	}
+	//while (*str == '0')
+	//	str++;
 	return (str);
 }
 
@@ -35,7 +37,7 @@ int	ft_atoi(const char *str)
 	size_t		len;
 
 	str_num = pass_whitespace_reach_str_num((char *)str, &sign);
-	if (str_num == NULL || *str_num == '\0')
+	if (str_num == NULL)
 		return (-1);
 	result = 0;
 	len = 0;
@@ -49,7 +51,6 @@ int	ft_atoi(const char *str)
 		}
 		str_num++;
 		prev_result = result;
-		len++;
 	}
 	result = sign * result;
 	return ((int)result);
@@ -81,17 +82,20 @@ int	main(void)
 	strs[18] = "-18446744073709551617";
 	strs[19] = "9999999999";
 	strs[20] = "-9999999999";
-	strs[21] = "184467440737095516180000000000ddd";
+	strs[21] = "+0000000000000000000000000000000000000000000000000000123";
 	strs[22] = 0;
 
-	idx = 0;
-	while (strs[idx])
-	{
-		printf("strs[%2d] = %20s\t", idx, strs[idx]);
-		printf("my func = %15d\t", ft_atoi(strs[idx]));
-		printf("atoi = %15d\n\n", atoi(strs[idx]));
-		idx++;
-	}
+	printf("my func = %15d\t", ft_atoi(strs[21]));
+
+	
+	//idx = 0;
+	//while (strs[idx])
+	//{
+	//	printf("strs[%2d] = %20s\t", idx, strs[idx]);
+	//	printf("my func = %15d\t", ft_atoi(strs[idx]));
+	//	printf("atoi = %15d\n\n", atoi(strs[idx]));
+	//	idx++;
+	//}
   return 0;
 }
 */

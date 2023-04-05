@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 16:19:50 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/03 22:19:12 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/05 20:35:15 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,8 +89,10 @@ char	**ft_split(char const *s, char c)
 
 	num_of_drawer = get_num_of_drawer(s, c, &s_idx, &d_idx);
 	drawer = assign_drawer(num_of_drawer);
+	if (!drawer)
+		return (0);
 	ch_cnt = 0;
-	while (s_idx < (strlen(s) + 1))
+	while (s_idx < (ft_strlen(s) + 1))
 	{
 		if ((ch_cnt != 0 && s[s_idx] == c) || (ch_cnt != 0 && s[s_idx] == '\0'))
 		{

@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 17:34:10 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/03 22:16:14 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/05 20:09:23 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (*(ptr + i) == c)
+		if (*(ptr + i) == (unsigned char)c)
 			return ((void *)(ptr + i));
 		i++;
 	}

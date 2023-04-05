@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 18:13:53 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/03 22:21:34 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/06 00:16:21 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	s2_len;
 	char	*return_ptr;
 
+	if (s1 == 0)
+		return (0);
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	return_ptr = (char *)malloc(sizeof(s1_len + s2_len + 1));
@@ -30,19 +32,16 @@ char	*ft_strjoin(char const *s1, char const *s2)
 /*
 int	main(void)
 {
-	char	s1[30] = "01234";
-	char	s2[10] = "efg";
-	char	*res;
-	int	i;
-	
-	//printf("main res:%s\n", ft_strjoin(s1, s2));
-	res = ft_strjoin(s1, s2);
-	i = 0;
-	while (res[i])
-	{
-		printf("%c", res[i]);
-		i++;
-	}
+	char *s1 = "my favorite animal is";
+	char *s2 = " ";
+	char *s3 = "the nyancat";
+
+	char *res = ft_strjoin(ft_strjoin(s1, s2), s3);
+	//char *res = ft_strjoin(s1, s2);
+	//char *res2 = ft_strjoin(s1, s3);
+
+	//write(1, res, ft_strlen(res));
+	write(1, res, ft_strlen(res));
 	return (0);
 }
 */

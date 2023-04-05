@@ -6,13 +6,13 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 16:19:04 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/03/25 21:17:15 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/05 16:07:36 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 	size_t	dst_len;
@@ -48,8 +48,8 @@ int main(void)
 		char	dest2[20] = "abcde";
 		char	src[10] = "xyz";
 		printf("size = %u-----------------\n", size);
-		printf("my func ret:%zu, dest:%s\n", ft_strlcat(dest2, src, size), dest2);
-		printf("strlcat ret:%lu, dest:%s\n\n", strlcat(dest1, src, size), dest1);
+		printf("myret:%zu, dest:%s\n", ft_strlcat(dest2, src, size), dest2);
+		printf("orret:%lu, dest:%s\n\n", strlcat(dest1, src, size), dest1);
 		size++;
 	}
 	return 0;
@@ -68,7 +68,7 @@ int main(void)
 //		char	dest2[20] = "01234";
 //		char	src[10] = "efg";
 //		printf("size = %u-----------------\n", size);
-//		printf("my func ret:%zu, dest:%s\n", ft_strlcat(dest2, src, size), dest2);
+//		printf("myfuncret:%zu, dest:%s\n", ft_strlcat(dest2, src, size), dest2);
 //		printf("strlcat ret:%lu, dest:%s\n\n", strlcat(dest1, src, size), dest1);
 //		size++;
 //	}

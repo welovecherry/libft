@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 16:00:27 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/03 22:22:33 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/05 15:34:11 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,19 @@ used when portability is not a concern.
 int	is_all_same(char *haystack_ptr, size_t h_idx, char *needle_ptr, size_t len)
 {
 	size_t	n_idx;
+	size_t	total_idx;
 
 	n_idx = 0;
-	while (needle_ptr[n_idx] && (n_idx + h_idx <= len))
+	total_idx = n_idx + h_idx;
+	while (needle_ptr[n_idx] && (total_idx < len))
 	{
-		if (needle_ptr[n_idx] == haystack_ptr[h_idx])
+		if (needle_ptr[n_idx] == haystack_ptr[h_idx + n_idx])
 		{
-			h_idx++;
 			n_idx++;
 		}
 		else
 			return (0);
+		total_idx = n_idx + h_idx;
 	}
 	if (needle_ptr[n_idx] == '\0')
 		return (1);
@@ -66,7 +68,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-
 /*
 #include <stdio.h>
 #include <string.h>
@@ -85,20 +86,25 @@ int main(void)
 	char	h4[15] = "abcde11ab";
 	char	n4[10] = "ab";
 
-	i = 0;
-	while (i < 7)
-	{
-		printf("i = %zu\n", i);
-		if (strnstr(h1, n1, i) != ft_strnstr(h1, n1, i))
-			printf("1 KO\n");
-		if (strnstr(h2, n2, i) != ft_strnstr(h2, n2, i))
-			printf("2 KO\n");
-		if (strnstr(h3, n3, i) != ft_strnstr(h3, n3, i))
-			printf("3 KO\n");
-		if (strnstr(h4, n4, i) != ft_strnstr(h4, n4, i))
-			printf("4 KO\n");
-		i++;
-	}
+	char haystack[30] = "0123dddd";
+	char to_find[10] = "dd";
+	// i = 0;
+	// while (i < 7)
+	//{
+	//	printf("i = %zu\n", i);
+	//	if (strnstr(h1, n1, i) != ft_strnstr(h1, n1, i))
+	//		printf("1 KO\n");
+	//	if (strnstr(h2, n2, i) != ft_strnstr(h2, n2, i))
+	//		printf("2 KO\n");
+	//	if (strnstr(h3, n3, i) != ft_strnstr(h3, n3, i))
+	//		printf("3 KO\n");
+	//	if (strnstr(h4, n4, i) != ft_strnstr(h4, n4, i))
+	//		printf("4 KO\n");
+	//	i++;
+	// }
+	printf("myfunc :%s\n", ft_strnstr(haystack, to_find, 5));
+	printf("strnstr:%s\n", strnstr(haystack, to_find, 5));
+
 	return (0);
 }
 */

@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 19:24:23 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/03 22:17:29 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/05 17:03:47 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,23 @@ Applications in which dst and src might overlap should use memmove instead.*/
 
 #include "libft.h"
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t	idx;
+	size_t			idx;
+	unsigned char	*ptr_dst;
+	unsigned char	*ptr_src;
 
+	if (dst == 0 || src == 0)
+		return (dst);
+	ptr_dst = (unsigned char *)dst;
+	ptr_src = (unsigned char *)src;
 	idx = 0;
 	while (idx < n)
 	{
-		*(unsigned char *)dst = *(unsigned char *)src;
-		dst += 1;
-		src += 1;
+		ptr_dst[idx] = ptr_src[idx];
 		idx++;
 	}
-	return ((void *)dst);
+	return (dst);
 }
 /*
 #include <string.h>

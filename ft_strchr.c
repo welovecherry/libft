@@ -6,21 +6,30 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 13:35:48 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/03 22:19:33 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/05 19:58:00 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+#include <stdio.h> // asdfasdfasd
+
 char	*ft_strchr(const char *s, int c)
 {
-	char	*ptr;
+	unsigned char	*ptr;
+	size_t			i;
 
-	ptr = (char *)s;
-	while (*ptr != '\0')
+	if (s == 0)
+		return (0);
+	ptr = (unsigned char *)s;
+	i = 0;
+	while (ptr[i] != '\0')
 	{
-		if (*ptr == c)
-			return (ptr);
-		ptr++;
+		if (ptr[i] == (unsigned char)c)
+			return ((char *)&ptr[i]);
+		i++;
 	}
+	if (ptr[i] == (unsigned char)c)
+		return ((char *)&ptr[i]);
 	return (0);
 }
 /*
@@ -28,16 +37,19 @@ char	*ft_strchr(const char *s, int c)
 #include <string.h>
 int main(void)
 {
-	char	ch = 'a';
-	char	*str1 = "bcdefbc";
-	char	*str2 = "bcdefbc";
+	//char	ch = 'a';
+	//char	*str1 = "bcdefbc";
+	//char	*str2 = "bcdefbc";
+	char	str3[] = "bonjour";
+	char	str4[] = "bonjour";
+	//while (ch <= 'g')
+	//{
+	//	printf("strchr : %s\n", strchr(str1, ch));
+	//	printf("my func: %s\n\n", ft_strchr(str2, ch));
+	//	ch++;
+	//}
+	printf("strchr : %s\n", strchr(str3,'\0'));
+	printf("my func:%s\n", ft_strchr(str4, '\0'));
 
-	while (ch <= 'g')
-	{
-		printf("strchr : %s\n", strchr(str1, ch));
-		printf("my func: %s\n\n", ft_strchr(str2, ch));
-		ch++;
-	}
 	return 0;
-}
-*/
+} */

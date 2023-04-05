@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:43:50 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/03 22:18:40 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/05 14:58:41 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_putendl_fd(char *s, int fd)
 {
 	ft_putstr_fd(s, fd);
-	write(1, "\n", fd);
+	write(fd, "\n", 1);
 }
 /*
 int	main(void)

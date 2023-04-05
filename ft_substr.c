@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 18:10:32 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/03 22:23:06 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/05 22:48:39 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,29 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*ptr_s;
-	char	*ptr_substr;
-	size_t	i;
+	char	*res_substr;
+	size_t	len_substr;
 
-	ptr_s = (char *)s;
-	ptr_substr = (char *)malloc(sizeof(char) * (len + 1));
-	if (!ptr_substr)
+	if (s == 0)
 		return (0);
-	i = 0;
-	while (i < len)
-	{
-		if (len > strlen(ptr_s) && (start + i == len - 1))
-			break ;
-		ptr_substr[i] = ptr_s[start + i];
-		i++;
+	ptr_s = (char *)s;
+	if ((unsigned int)ft_strlen(ptr_s) < start || len == 0)
+	{	
+		res_substr = (char *)malloc(sizeof(char) * 1);
+		if (!res_substr)
+			return (0);
+		res_substr[0] = '\0';
+		return (res_substr);
 	}
-	ptr_substr[i] = '\0';
-	return (ptr_substr);
+	if (ft_strlen(ptr_s) < len + start)
+		len_substr = ft_strlen(ptr_s) - start;
+	else
+		len_substr = len;
+	res_substr = (char *)malloc(sizeof(char) * (len_substr + 1));
+	if (!res_substr)
+		return (0);
+	ft_strlcpy(res_substr, &(ptr_s[start]), len_substr + 1);
+	return (res_substr);
 }
 /*
 int	main(void)

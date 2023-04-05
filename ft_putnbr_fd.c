@@ -6,22 +6,22 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:48:17 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/03 22:18:55 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/05 20:31:53 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_zero_or_minimum(int n)
+int	is_zero_or_minimum(int n, int fd)
 {
 	if (n == 0)
 	{
-		ft_putchar_fd('0', 1);
+		ft_putchar_fd('0', fd);
 		return (1);
 	}
 	if (n == -2147483648)
 	{
-		ft_putstr_fd("-2147483648", 1);
+		ft_putstr_fd("-2147483648", fd);
 		return (1);
 	}
 	return (0);
@@ -42,7 +42,7 @@ void	ft_putnbr_fd(int n, int fd)
 	int		div;
 	char	ch;
 
-	if (is_zero_or_minimum(n))
+	if (is_zero_or_minimum(n, fd))
 		return ;
 	else if (n < 0)
 	{
