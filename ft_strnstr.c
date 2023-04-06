@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+// #include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
 /*
 strnstr() function locates the first occurrence of the null-terminated
@@ -27,22 +29,44 @@ int	is_all_same(char *haystack_ptr, size_t h_idx, char *needle_ptr, size_t len)
 	size_t	total_idx;
 
 	n_idx = 0;
-	total_idx = n_idx + h_idx;
+	total_idx = h_idx;
 	while (needle_ptr[n_idx] && (total_idx < len))
 	{
-		if (needle_ptr[n_idx] == haystack_ptr[h_idx + n_idx])
+		if (needle_ptr[n_idx] != haystack_ptr[h_idx + n_idx])
 		{
-			n_idx++;
+			return (0);
 		}
 		else
-			return (0);
-		total_idx = n_idx + h_idx;
+        {
+			n_idx++;
+	        total_idx = n_idx + h_idx;
+        }
 	}
 	if (needle_ptr[n_idx] == '\0')
 		return (1);
 	else
 		return (0);
 }
+
+// int	is_all_same(char *haystack_ptr, size_t h_idx, char *needle_ptr, size_t len)
+// {
+// 	size_t	n_idx;
+// 	size_t	total_idx;
+
+// 	n_idx = 0;
+// 	total_idx = n_idx + h_idx;
+// 	while (needle_ptr[n_idx] && (n_idx < len))
+// 	{
+// 		if (needle_ptr[n_idx] != haystack_ptr[h_idx + n_idx])
+// 			return (0);
+// 		else
+// 			n_idx++;
+// 	}
+// 	if (needle_ptr[n_idx] == '\0')
+// 		return (1);
+// 	else
+// 		return (0);
+// }
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
@@ -54,7 +78,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	needle_ptr = (char *)needle;
 	if (needle_ptr[0] == 0)
 		return (haystack_ptr);
-	if (ft_strlen(needle_ptr) > len)
+    
+	if (strlen(needle_ptr) > len) 
 		return (0);
 	h_idx = 0;
 	while (haystack_ptr[h_idx] && (h_idx < len))
@@ -68,9 +93,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-/*
-#include <stdio.h>
-#include <string.h>
+
+
 int main(void)
 {
 	size_t	i;
@@ -87,24 +111,31 @@ int main(void)
 	char	n4[10] = "ab";
 
 	char haystack[30] = "0123dddd";
-	char to_find[10] = "dd";
-	// i = 0;
+	char to_find[15] = "abcdefgijkl";
+	i = 0;
+	while (i < 7)
+	{
+		printf("i = %zu\n", i);
+		if (strnstr(h1, n1, i) != ft_strnstr(h1, n1, i))
+			printf("1 KO\n");
+		if (strnstr(h2, n2, i) != ft_strnstr(h2, n2, i))
+			printf("2 KO\n");
+		if (strnstr(h3, n3, i) != ft_strnstr(h3, n3, i))
+			printf("3 KO\n");
+		if (strnstr(h4, n4, i) != ft_strnstr(h4, n4, i))
+			printf("4 KO\n");
+		i++;
+	}
+    // i = 0;
 	// while (i < 7)
-	//{
-	//	printf("i = %zu\n", i);
-	//	if (strnstr(h1, n1, i) != ft_strnstr(h1, n1, i))
-	//		printf("1 KO\n");
-	//	if (strnstr(h2, n2, i) != ft_strnstr(h2, n2, i))
-	//		printf("2 KO\n");
-	//	if (strnstr(h3, n3, i) != ft_strnstr(h3, n3, i))
-	//		printf("3 KO\n");
-	//	if (strnstr(h4, n4, i) != ft_strnstr(h4, n4, i))
-	//		printf("4 KO\n");
-	//	i++;
+	// {
+	// 	printf("i = %zu\n", i);
+	// 	printf("h1;%s, %s\n", strnstr(h1, n1, i), ft_strnstr(h1, n1, i));
+	// 	printf("h2;%s, %s\n", strnstr(h2, n2, i), ft_strnstr(h2, n2, i));
+	// 	printf("h3;%s, %s\n", strnstr(h3, n3, i), ft_strnstr(h3, n3, i));
+	// 	printf("h4;%s, %s\n\n", strnstr(h4, n4, i), ft_strnstr(h4, n4, i));
+	// 	i++;
 	// }
-	printf("myfunc :%s\n", ft_strnstr(haystack, to_find, 5));
-	printf("strnstr:%s\n", strnstr(haystack, to_find, 5));
 
 	return (0);
 }
-*/
