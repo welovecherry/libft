@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 13:40:03 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/05 20:07:50 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/07 15:38:28 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char	*ft_strrchr(const char *s, int c)
 	int				len;
 	unsigned char	*ptr_s;
 
-	if (s == 0)
-		return (0);
 	ptr_s = (unsigned char *)s;
 	len = ft_strlen(s);
 	if (ptr_s[len] == (unsigned char)c)

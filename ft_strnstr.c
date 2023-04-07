@@ -6,13 +6,11 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 16:00:27 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/05 15:34:11 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/07 14:34:26 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 /*
 strnstr() function locates the first occurrence of the null-terminated
@@ -21,6 +19,11 @@ searched.
 Characters that appear after a `\0' character are not searched.
 Since the strnstr() function is a FreeBSD specific API, it should only be
 used when portability is not a concern.
+
+RETURN VALUES
+     If needle is an empty string, haystack is returned; if needle occurs
+     nowhere in haystack, NULL is returned; otherwise a pointer to the first
+     character of the first occurrence of needle is returned.
 */
 
 int	is_all_same(char *haystack_ptr, size_t h_idx, char *needle_ptr, size_t len)
@@ -37,36 +40,16 @@ int	is_all_same(char *haystack_ptr, size_t h_idx, char *needle_ptr, size_t len)
 			return (0);
 		}
 		else
-        {
+		{
 			n_idx++;
-	        total_idx = n_idx + h_idx;
-        }
+			total_idx = n_idx + h_idx;
+		}
 	}
 	if (needle_ptr[n_idx] == '\0')
 		return (1);
 	else
 		return (0);
 }
-
-// int	is_all_same(char *haystack_ptr, size_t h_idx, char *needle_ptr, size_t len)
-// {
-// 	size_t	n_idx;
-// 	size_t	total_idx;
-
-// 	n_idx = 0;
-// 	total_idx = n_idx + h_idx;
-// 	while (needle_ptr[n_idx] && (n_idx < len))
-// 	{
-// 		if (needle_ptr[n_idx] != haystack_ptr[h_idx + n_idx])
-// 			return (0);
-// 		else
-// 			n_idx++;
-// 	}
-// 	if (needle_ptr[n_idx] == '\0')
-// 		return (1);
-// 	else
-// 		return (0);
-// }
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
@@ -76,25 +59,19 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 	haystack_ptr = (char *)haystack;
 	needle_ptr = (char *)needle;
-	if (needle_ptr[0] == 0)
+	if (*needle == '\0')
 		return (haystack_ptr);
-    
-	if (strlen(needle_ptr) > len) 
-		return (0);
 	h_idx = 0;
 	while (haystack_ptr[h_idx] && (h_idx < len))
 	{
-		if (haystack_ptr[h_idx] == needle_ptr[0])
-		{
-			if (is_all_same(haystack_ptr, h_idx, needle_ptr, len))
-				return (&haystack_ptr[h_idx]);
-		}
+		if ((haystack_ptr[h_idx] == needle_ptr[0]) \
+		&& (is_all_same(haystack_ptr, h_idx, needle_ptr, len)))
+			return (&haystack_ptr[h_idx]);
 		h_idx++;
 	}
 	return (0);
 }
-
-
+/*
 int main(void)
 {
 	size_t	i;
@@ -139,3 +116,4 @@ int main(void)
 
 	return (0);
 }
+*/

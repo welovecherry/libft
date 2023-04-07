@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 15:49:09 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/03 22:12:16 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/07 16:17:44 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
-	ptr = (char *)malloc(sizeof(size) * count);
+	ptr = malloc(size * count);
 	if (!ptr)
 		return (0);
-	ft_bzero(ptr, count);
+	ft_bzero(ptr, size * count);
 	return (ptr);
 }
 /*

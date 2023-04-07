@@ -1,7 +1,16 @@
-#include <stdio.h>
-#include <string.h>
-#include <limits.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/03 22:00:36 by jungmiho          #+#    #+#             */
+/*   Updated: 2023/04/07 13:42:48 by jungmiho         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 char	*pass_whitespace_reach_str_num(char *str, int *sign)
 {	
@@ -44,7 +53,7 @@ int	ft_atoi(const char *str)
 	}
 	return ((int)(sign * result));
 }
-
+/*
 int	main(void)
 {
 	int		idx;
@@ -85,3 +94,4 @@ int	main(void)
 	}
   return 0;
 }
+*/

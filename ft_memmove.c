@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 16:57:03 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/05 23:10:54 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/07 15:35:43 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char	*ptr_dst;
 	unsigned char	*ptr_src;
 
-	if (dst == 0 || src == 0)
+	if (dst == 0 && src == 0)
 		return (dst);
 	ptr_dst = (unsigned char *)dst;
 	ptr_src = (unsigned char *)src;

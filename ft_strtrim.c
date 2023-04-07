@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 16:35:25 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/06 00:13:55 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/07 16:01:31 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	first_idx;
 	size_t	last_idx;
 
+	if (ft_strlen(s1) == 0)
+	{
+		ptr_trimmed = (char *)malloc(sizeof(char) * 1);
+		*ptr_trimmed = '\0';
+		return (ptr_trimmed);
+	}
 	first_idx = get_first_idx(s1, set);
 	last_idx = get_last_idx(s1, first_idx, set);
 	ptr_trimmed = (char *)malloc(sizeof(char) * (last_idx - first_idx + 2));
