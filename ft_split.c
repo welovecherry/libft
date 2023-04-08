@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 16:19:50 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/05 20:35:15 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/07 23:20:52 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,26 +60,29 @@ char	**assign_drawer(size_t num_of_drawer)
 	return (drawer);
 }
 
-char	*assign_box(size_t *ch_cnt, char const *s, int s_idx)
+char	*assign_box(size_t *ch_cnt, char *s, char **drawer, size_t d_idx)
 {
 	char	*box;
 	size_t	box_idx;
 
 	box = (char *)malloc(sizeof(char) * (*ch_cnt + 1));
 	if (!box)
+	{
+		free_all(drawer, d_idx);
 		return (0);
+	}
 	box_idx = 0;
 	while (box_idx < *ch_cnt)
 	{
-		box[box_idx++] = s[s_idx - *ch_cnt];
-		s_idx++;
+		box[box_idx] = *(s - *ch_cnt + box_idx);
+		box_idx++;
 	}
 	box[box_idx] = '\0';
 	*ch_cnt = 0;
 	return (box);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(char *s, char c)
 {
 	char	**drawer;
 	size_t	d_idx;
@@ -96,10 +99,9 @@ char	**ft_split(char const *s, char c)
 	{
 		if ((ch_cnt != 0 && s[s_idx] == c) || (ch_cnt != 0 && s[s_idx] == '\0'))
 		{
-			drawer[d_idx] = assign_box(&ch_cnt, s, s_idx);
-			if (drawer[d_idx] == 0)
-				free_all(drawer, d_idx);
-			d_idx++;
+			drawer[d_idx] = assign_box(&ch_cnt, s + s_idx, drawer, d_idx);
+			if (drawer[d_idx++] == 0)
+				return (0);
 		}
 		else if (s[s_idx] != c && s[s_idx] != '\0')
 			ch_cnt++;
@@ -109,6 +111,7 @@ char	**ft_split(char const *s, char c)
 	return (drawer);
 }
 /*
+#include <stdio.h>
 int	main(void)
 {
 	char s[15] = "aa2bb2";

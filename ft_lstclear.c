@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 18:35:29 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/05 15:59:32 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/07 21:19:25 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	temp = *lst;
 	while (temp != NULL)
 	{
-		ft_lstdelone(temp, del);
 		next_temp = temp->next;
-		free(temp);
+		ft_lstdelone(temp, del);
 		temp = next_temp;
 	}
+	*lst = NULL;
 }
 /*
 // delete below

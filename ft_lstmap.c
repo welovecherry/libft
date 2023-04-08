@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 17:46:15 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/03 22:15:30 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/07 22:30:22 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,29 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*temp;
-	t_list	*ptr_return;
-	void	*new_content;
+	t_list	*old_lst;
+	t_list	*new_lst;
+	t_list	*new_node;
 
-	temp = lst;
-	ptr_return = temp;
-	while (temp != NULL)
+	new_lst = NULL;
+	old_lst = lst;
+	while (old_lst != NULL)
 	{
-		ptr_return = (t_list *)malloc(sizeof(t_list));
-		if (!ptr_return)
-			ft_lstclear(&ptr_return, del);
-		new_content = f(temp->content);
-		temp->content = new_content;
-		temp = temp->next;
+		new_node = ft_lstnew(f(old_lst->content));
+		if (new_node == NULL)
+		{
+			ft_lstclear(&new_lst, del);
+			break ;
+		}
+		ft_lstadd_back(&new_lst, new_node);
+		old_lst = old_lst->next;
 	}
-	return (ptr_return);
+	return (new_lst);
 }
 /*
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 // delete below
 void	print_all_nodes(t_list *ptr)
 {
@@ -86,5 +91,4 @@ int	main(void)
 	printf("\n");
 	print_all_nodes(head);
 	return (0);
-}
-*/
+}  */

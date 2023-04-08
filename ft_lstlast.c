@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 16:37:47 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/03 22:15:11 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/07 18:19:12 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ t_list	*ft_lstlast(t_list *lst)
 {
 	t_list	*temp;
 
+	if (lst == 0)
+		return (0);
 	temp = lst;
 	while (temp->next != NULL)
 	{

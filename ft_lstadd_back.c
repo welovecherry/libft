@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 16:40:02 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/03 22:13:39 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/08 13:49:52 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,18 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last_node;
 
-	last_node = ft_lstlast(*lst);
-	last_node->next = new;
+	if (*lst == NULL)
+	{
+		*lst = new;
+	}
+	else
+	{
+		last_node = ft_lstlast(*lst);
+		last_node->next = new;
+	}
 }
 /*
-// delete below
+new may not be a single node
 void	print_all_nodes(t_list *node)
 {
 	while (node)

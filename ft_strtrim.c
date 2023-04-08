@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 16:35:25 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/07 16:01:31 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/07 23:09:02 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 int main(void)
 {
 	char	s1[20] = "11a11bc";
-	char	set[5] = "12";
+	char	set[5] = "";
 	char	*ptr;
 	int		i;
 	

@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 19:24:23 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/07 15:34:14 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/07 18:16:25 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@ If dst and src over-lap, behavior is undefined.
 Applications in which dst and src might overlap should use memmove instead.*/
 
 #include "libft.h"
+
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t			idx;

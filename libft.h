@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 15:25:29 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/07 16:20:13 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/07 23:20:33 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
-char	**ft_split(char const *s, char c);
+char	**ft_split(char *s, char c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s1);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
