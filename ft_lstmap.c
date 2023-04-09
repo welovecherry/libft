@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 17:46:15 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/07 22:30:22 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/09 14:08:53 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_lst;
 	t_list	*new_node;
 
+	if (lst == NULL || f == NULL || del == NULL)
+		return (NULL);
 	new_lst = NULL;
 	old_lst = lst;
 	while (old_lst != NULL)

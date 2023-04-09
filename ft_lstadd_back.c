@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 16:40:02 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/08 13:49:52 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/09 13:54:18 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last_node;
 
+	if (lst == NULL || new == NULL)
+		return ;
 	if (*lst == NULL)
 	{
 		*lst = new;

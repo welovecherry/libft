@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 18:21:57 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/07 20:57:00 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/09 13:56:22 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
+	if (lst == NULL || del == NULL)
+		return ;
 	del(lst->content);
 	free(lst);
 }

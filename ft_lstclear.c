@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 18:35:29 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/07 21:19:25 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/09 13:55:27 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*next_temp;
 	t_list	*temp;
 
+	if (lst == NULL || del == NULL)
+		return ;
 	temp = *lst;
 	while (temp != NULL)
 	{

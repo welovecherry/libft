@@ -6,7 +6,7 @@
 /*   By: jungmiho <jungmiho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 15:57:46 by jungmiho          #+#    #+#             */
-/*   Updated: 2023/04/03 22:14:55 by jungmiho         ###   ########.fr       */
+/*   Updated: 2023/04/09 13:57:05 by jungmiho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
+	if (lst == NULL || f == NULL)
+		return ;
 	while (lst != NULL)
 	{
 		f(lst->content);
